@@ -1,0 +1,5 @@
+api:
+    resource: api_routes.yaml
+    prefix: /api/{_version}
+    requirements:
+        _version: "[0-9]+.[0-9]+.[0-9]+"

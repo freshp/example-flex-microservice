@@ -1,0 +1,28 @@
+api_user_list:
+    path:     /list
+    methods:  [GET]
+    defaults: { _controller: 'App\Action\ListTestUserAction' }
+
+user_add:
+    path:     /add
+    methods:  [PUT]
+    defaults: { _controller: 'App\Action\AddTestUserAction' }
+
+user_show:
+    path:     /show/{testUserId}
+    methods:  [GET]
+    defaults: { _controller: 'App\Action\ShowTestUserAction' }
+    requirements:
+        testUserId: '\d+'
+
+user_update:
+    path:     /update
+    methods:  [POST]
+    defaults: { _controller: 'App\Action\UpdateTestUserAction' }
+
+user_remove:
+    path:     /remove/{testUserId}
+    methods:  [POST]
+    defaults: { _controller: 'App\Action\RemoveTestUserAction' }
+    requirements:
+        testUserId: '\d+'

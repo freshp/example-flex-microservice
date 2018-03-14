@@ -1,0 +1,17 @@
+language: php
+
+php:
+  - 7.2
+
+sudo: false
+
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction
+
+script:
+  - ./vendor/bin/phpunit.phar --configuration ./phpunit.xml
+  - ./vendor/bin/phpmd-extension.phar ./src text phpmd.xml
+  - ./vendor/bin/phpstan analyse -l 7 ./src
+  - ./vendor/bin/phpcs.phar ./src --standard=PSR2
+  - ./vendor/bin/phpcpd.phar ./src
