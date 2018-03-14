@@ -14,8 +14,13 @@ Features:
 * possibility to log all service requests by using sentry (sentry/sentry-symfony)
 * locally working with symfony webserver and sqlite
 * garbage collector for old softdeleted entries
-  * console command to hard delete entries by parameter 
-
+  * console command to hard delete entries by parameter
+  
+### garbage collector command 
+```
+php ./bin/console app:garbage-collector --hardDeleteTimeParser="-2 months"
+```
+ 
 ### build local environment
 1. create database
     ```

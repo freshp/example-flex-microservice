@@ -55,6 +55,7 @@ class TestUserRepository extends EntityRepository
         $this->getEntityManager()->getFilters()->disable('softdeleteable');
         $entries = $this->createQueryBuilder('tu')
             ->where('tu.deletedAt < :hardDeleteTime')
+            ->andWhere('tu.deletedAt IS NOT NULL')
             ->setParameter('hardDeleteTime', $hardDeleteDate)
             ->getQuery()
             ->getResult();
