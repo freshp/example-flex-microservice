@@ -20,6 +20,8 @@ class AddTestUserAction
     public function __invoke(Request $request): JsonResponse
     {
         $user = new TestUser($request->get('name'));
+
+        // TODO: get user data by request for example
         $user->setCreatedBy(1);
         $user->setUpdatedBy(1);
 

@@ -20,6 +20,10 @@ class RemoveTestUserAction
     {
         /** @var TestUser $user */
         $user = $this->testUserRepository->findOneBy(['identifier' => $testUserId]);
+        if (false === $user instanceof TestUser) {
+            return new JsonResponse('', 400);
+        }
+
         $this->testUserRepository->remove($user);
 
         return new JsonResponse(true);

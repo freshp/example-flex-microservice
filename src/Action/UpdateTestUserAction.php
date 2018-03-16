@@ -5,7 +5,6 @@ namespace App\Action;
 
 use App\Entity\TestUser;
 use App\Repository\TestUserRepository;
-use Gedmo\Loggable\Entity\Repository\LogEntryRepository;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -22,7 +21,13 @@ class UpdateTestUserAction
     {
         /** @var TestUser $user */
         $user = $this->testUserRepository->findOneBy(['identifier' => $request->get('id')]);
+
+        if (false === $user instanceof TestUser) {
+            return new JsonResponse('', 400);
+        }
+
         $user->setName($request->get('name'));
+        // TODO: get user data by request for example
         $user->setUpdatedBy(2);
         $this->testUserRepository->persist($user);
 
