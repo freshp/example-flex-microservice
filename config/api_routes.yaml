@@ -1,4 +1,9 @@
-api_user_list:
+api_ping:
+    path:     /ping
+    methods:  [GET]
+    defaults: { _controller: 'App\Action\PingAction' }
+
+user_list:
     path:     /list
     methods:  [GET]
     defaults: { _controller: 'App\Action\ListTestUserAction' }

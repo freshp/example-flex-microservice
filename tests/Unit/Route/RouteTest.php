@@ -12,17 +12,17 @@ class RouteTest extends ApiTestCase
         self::createClientWithDatabaseAndFixtures(new LoadFixtures());
     }
 
-    public function testList()
+    public function testPing()
     {
-        self::$client->request('GET', '/api/1.0.0/list');
+        self::$client->request('GET', '/api/1.0.0/ping');
         $response = self::$client->getResponse();
 
         $this->assertEquals(200, $response->getStatusCode());
     }
 
-    public function testShow()
+    public function testList()
     {
-        self::$client->request('GET', '/api/1.0.0/show/2');
+        self::$client->request('GET', '/api/1.0.0/list');
         $response = self::$client->getResponse();
 
         $this->assertEquals(200, $response->getStatusCode());
@@ -35,6 +35,14 @@ class RouteTest extends ApiTestCase
             '/api/1.0.0/add',
             ['name' => 'tester']
         );
+        $response = self::$client->getResponse();
+
+        $this->assertEquals(200, $response->getStatusCode());
+    }
+
+    public function testShow()
+    {
+        self::$client->request('GET', '/api/1.0.0/show/1');
         $response = self::$client->getResponse();
 
         $this->assertEquals(200, $response->getStatusCode());
