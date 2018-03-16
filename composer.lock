@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "115cc38360652123166ef591740f75e1",
+    "content-hash": "6e194e8d7a5b856bc0c9203ad4d92704",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -3101,16 +3101,16 @@
         },
         {
             "name": "freshp/phpunit-webtestcase-fixture-helper",
-            "version": "1.0.0-rc1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/freshp/phpunit-webtestcase-fixture-helper.git",
-                "reference": "7931cb29cc67675e9b1f03edf0a37dd2c7eca670"
+                "reference": "e5fbfe9deb254b946c5739ddb7565837b6cc29f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freshp/phpunit-webtestcase-fixture-helper/zipball/7931cb29cc67675e9b1f03edf0a37dd2c7eca670",
-                "reference": "7931cb29cc67675e9b1f03edf0a37dd2c7eca670",
+                "url": "https://api.github.com/repos/freshp/phpunit-webtestcase-fixture-helper/zipball/e5fbfe9deb254b946c5739ddb7565837b6cc29f9",
+                "reference": "e5fbfe9deb254b946c5739ddb7565837b6cc29f9",
                 "shasum": ""
             },
             "require": {
@@ -3140,7 +3140,7 @@
                 "MIT"
             ],
             "description": "Helps to manage fixtures for test-environment in webtestcases.",
-            "time": "2018-03-16T12:29:59+00:00"
+            "time": "2018-03-16T13:16:51+00:00"
         },
         {
             "name": "nelmio/api-doc-bundle",
@@ -4265,8 +4265,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "roave/security-advisories": 20,
-        "freshp/phpunit-webtestcase-fixture-helper": 5
+        "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
