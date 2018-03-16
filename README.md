@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/freshp/example-flex-microservice.svg?branch=master)](https://travis-ci.org/freshp/example-flex-microservice)
+
 # test microservice flex project
 
 this package provides all basic features of a micro service in php.
