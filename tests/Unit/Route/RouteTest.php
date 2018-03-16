@@ -3,9 +3,9 @@
 namespace App\Tests\Unit\Route;
 
 use App\Tests\Fixtures\DataFixtures\ORM\LoadFixtures;
-use FreshP\PhpunitWebtestcaseFixtureHelper\Tests\Helper\ApiTestCase;
+use FreshP\PhpunitWebtestcaseFixtureHelper\WebTestCaseWithFixtures;
 
-class RouteTest extends ApiTestCase
+class RouteTest extends WebTestCaseWithFixtures
 {
     public static function setUpBeforeClass()
     {
